@@ -2,6 +2,8 @@
 // EXERCISE 3
 // Make sure to solve two parts beneath
 
+import { getNumbersWithSquareRoots } from "./e2";
+
 /** 
  * PART 1
  * Return the average value for the given array of numbers.
@@ -9,7 +11,11 @@
  * */
 
 export function getAverage(array) {
-  // Your code goes here...
+  let sum = 0;
+  for(let i = 0; i <numbers.length; i++){
+    sum += numbers[i];
+  }
+  return sum / numbers.length;
 
 }
 
@@ -21,10 +27,20 @@ export function getAverage(array) {
  * Example2: getStringSum("GHIUJUHSG") => 0
  * */ 
 
-export function getStringSum(str) {
-  // Your code goes here...
+ export function getStringSum(str) {
+  let sum = 0;
 
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+
+    if (!isNaN(char)) {  
+      sum += Number(char);
+    }
+  }
+
+  return sum;
 }
+
 
 
 // === TEST YOURSELF ===

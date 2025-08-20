@@ -5,10 +5,26 @@
 // doesArrayInclude(['a', 'b', 'c'], 'f') => false
 // NOTE: You can NOT use the array.includes() method in your code
 
-export function doesArrayInclude(array, value) {
-  // Your code goes here...
 
+export function flatArrays(arr) {
+  let result = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (Array.isArray(arr[i])) {
+      
+      for (let j = 0; j < arr[i].length; j++) {
+        result.push(arr[i][j]);
+      }
+    } else {
+      
+      result.push(arr[i]);
+    }
+  }
+
+  return result;
 }
+
+
 
 
 

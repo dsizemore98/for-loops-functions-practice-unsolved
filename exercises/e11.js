@@ -4,10 +4,16 @@
 // Array example: bankAccounts in /data/data.js
 // getAllWithdrawals(bankAccounts) => [3432, 0, 43242.34, 0, 23432]
 
-export function getAllWithdrawals(array) {
-  // Your code goes here...
-
+export function getAllWithdrawals(bankAccounts) {
+  return bankAccounts.map(account => {
+    if (!account.withdrawals || account.withdrawals.length === 0) {
+      return 0;
+    }
+    return account.withdrawals.reduce((sum, w) => sum + w, 0);
+  });
 }
+``
+
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-11"

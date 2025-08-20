@@ -6,7 +6,18 @@
 // getClientsWithWrongBalance(bankAccounts) => [{ name: 'Name1', balance: 32, ... }, { name: 'Name2', balance: 3523, ... }]
 
 export function getClientsWithWrongBalance(array) {
-  // Your code goes here...
+  function getClientsWithWrongBalance(bankAccounts) {
+  return bankAccounts.filter(account => {
+    const deposits = account.deposits || [];
+    const withdrawals = account.withdrawals || [];
+    
+    const sumDeposits = deposits.reduce((total, d) => total + d, 0);
+    const sumWithdrawals = withdrawals.reduce((total, w) => total + w, 0);
+    
+    return account.balance !== (sumDeposits - sumWithdrawals);
+  });
+}
+
 
 }
 
