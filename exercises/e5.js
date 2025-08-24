@@ -5,9 +5,12 @@
 // getAllClientNames(bankAccounts) => ['Kevin', 'Spenser']
 
 export function getAllClientNames(array) {
-  return bankAccounts.map(account => account.name);
+  let userNames = [];
+  for (let user of array){
+usernames.push(user.name);
+  }
+  return usersNames;
 }
-
 
 
 // === TEST YOURSELF ===
