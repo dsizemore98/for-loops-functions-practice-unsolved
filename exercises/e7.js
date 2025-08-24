@@ -4,7 +4,7 @@
 // Array example: bankAccounts in /data/data.js
 // getClientWithLeastBalance(bankAccounts) => [{ name: 'SomeName', balance: 32, ... }]
 
-export function getAllClientNames(bankAccounts) {
+export function getClientWithLeastBalance (array) {
   let result = [];
   for (let i = 0; i < bankAccounts.length; i++) {
     result.push(bankAccounts[i].name);
