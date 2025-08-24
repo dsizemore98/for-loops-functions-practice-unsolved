@@ -3,7 +3,7 @@
 // Array example: bankAccounts in /data/data.js
 // getClientWithNoMoney(bankAccounts) => ['Kevin', 'Jon']
 
- export function getAllClientNames(bankAccounts) {
+ export function getClientWithNoMoney(array) {
   let result = [];
   for (let i = 0; i < bankAccounts.length; i++) {
     result.push(bankAccounts[i].name);
